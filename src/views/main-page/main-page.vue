@@ -3,8 +3,18 @@
 
 <template>
     <div class="main-page">
-        <recommend-badge>
-            test
-        </recommend-badge>
+        <header-bar>
+            header
+        </header-bar>
+        <stock-table>
+            table
+            <stock-row>
+                row
+            </stock-row>
+            <recommend-badge>
+                buy | hold | sell
+            </recommend-badge>
+        </stock-table>
+        <search-input>search</search-input>
     </div>
 </template>
