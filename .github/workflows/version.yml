@@ -1,19 +1,14 @@
-name: Git Version
-
+name: Bump version
 on:
   push:
     branches:
       - master
-
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - name: Github Tag with semantic versioning
+        uses: hennejg/github-tag-action@v4.3.1
         with:
-          ref: ${{ github.head_ref }}   # checkout the correct branch name
-          fetch-depth: 0                # fetch the whole repo history
-
-      - name: Git Version
-        uses: codacy/git-version@2.2.0
+          github_token: ${{ secrets.GITHUB_TOKEN }}
