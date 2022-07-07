@@ -1,2 +1,0 @@
-- name: Github Tag with semantic versioning
-  uses: hennejg/github-tag-action@v4.3.1
