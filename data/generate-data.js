@@ -30,7 +30,7 @@ const getDaysArray = function(start, end) {
  * Generate fake data
  */
 const generateData = () => {
-    const dataObject = {};
+    const dataObject = { data: {} };
 
     // generate between 20 to 40 symbols
     const numSymbols = randomInteger(20, 40);
@@ -42,7 +42,7 @@ const generateData = () => {
     const nextMonth = new Date(today.setMonth(today.getMonth()+1));
     const daysArray = getDaysArray(lastMonth, nextMonth);
 
-    tempArray.forEach(() => {
+    tempArray.forEach((temp, index) => {
         const symbol = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(0, 4).toUpperCase();
         const dayData = {};
 
@@ -75,7 +75,7 @@ const generateData = () => {
             };
         });
 
-        dataObject[symbol] = dayData;
+        dataObject.data[index] = { symbol, dayData };
     });
 
     let jsonData = JSON.stringify(dataObject, null, 4);
