@@ -1,3 +1,5 @@
+import { mapState, mapActions } from 'vuex';
+
 export default {
     name: 'main-page',
     components: {
@@ -12,5 +14,14 @@ export default {
         svgSearch: () => import(/* webpackChunkName: "svg-search" */ '@/assets/svg-search.vue'),
         svgSetting: () => import(/* webpackChunkName: "svg-setting" */ '@/assets/svg-setting.vue'),
         svgShare: () => import(/* webpackChunkName: "svg-share" */ '@/assets/svg-share.vue'),
+    },
+    mounted() {
+        this.fetchStocks();
+    },
+    computed: {
+        ...mapState(['getStocks']),
+    },
+    methods: {
+        ...mapActions(['fetchStocks']),
     },
 };
