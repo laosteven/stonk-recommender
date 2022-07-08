@@ -4,11 +4,16 @@
 
     .content {
         padding: 24px;
+        margin-bottom: 100px;
     }
 
     .form {
         display: flex;
-        padding: 4px 16px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 24px 20px;
+        background: white;
 
         .svg-form {
             height: 16px;

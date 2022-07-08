@@ -1,4 +1,4 @@
-import { mapState, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
     name: 'main-page',
@@ -15,9 +15,6 @@ export default {
     },
     mounted() {
         this.fetchStocks();
-    },
-    computed: {
-        ...mapState(['getStocks']),
     },
     methods: {
         ...mapActions(['fetchStocks']),

@@ -39,7 +39,7 @@ const generateData = () => {
     // generate dates [+/- 1 month]
     const today = new Date();
     const lastMonth = new Date(today.setMonth(today.getMonth()-1));
-    const nextMonth = new Date(today.setMonth(today.getMonth()+1));
+    const nextMonth = new Date(today.setMonth(today.getMonth()+2));
     const daysArray = getDaysArray(lastMonth, nextMonth);
 
     tempArray.forEach((temp, index) => {
@@ -57,7 +57,7 @@ const generateData = () => {
                 // Control it
                 ratios.buy = ratios.buy / 2;
                 ratios.sell = ratios.sell / 2;
-                ratios.hold = 1 - ratios.buy + ratios.sell;
+                ratios.hold = 1 - (ratios.buy + ratios.sell);
             } else {
                 ratios.hold = 1 - calcRatio;
             }
@@ -67,11 +67,11 @@ const generateData = () => {
 
             // Add data
             dayData[ISOday] = {
-                price: randomInteger(100, 100000) / 100,
+                price: (randomInteger(100, 100000) / 100).toFixed(2),
                 social: randomInteger(1, 1000),
-                buy: ratios.buy,
-                hold: ratios.hold,
-                sell: ratios.sell,
+                buy: Math.round(ratios.buy * 100),
+                hold: Math.round(ratios.hold * 100),
+                sell: Math.round(ratios.sell * 100),
             };
         });
 

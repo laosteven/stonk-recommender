@@ -1,3 +1,42 @@
 .stock-table {
-    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 12px 15px;
+    }
+
+    tbody {
+        td {
+            text-align: center;
+        }
+        
+        tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+    }
+
+    .symbol {
+        font-weight: bold;
+        text-align: center;
+    }
 }
