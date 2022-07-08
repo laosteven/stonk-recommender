@@ -2,6 +2,9 @@ import { mapGetters } from 'vuex';
 
 export default {
     name: 'stock-table',
+    components: {
+        recommendBadge: () => import(/* webpackChunkName: "recommend-badge" */ '@/components/recommend-badge'),
+    },
     data() {
         return {
             today: '',

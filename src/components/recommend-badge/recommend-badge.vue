@@ -2,7 +2,7 @@
 <script src="./recommend-badge.js"></script>
 
 <template>
-    <div class="recommend-badge">
-        <slot />
+    <div class="recommend-badge" :class="badgeClasses">
+        {{ recommendation }}
     </div>
 </template>

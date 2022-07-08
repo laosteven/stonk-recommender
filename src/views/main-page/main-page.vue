@@ -5,15 +5,7 @@
     <div class="main-page">
         <header-bar class="header" />
         <div class="content">
-            <stock-table>
-                table
-                <stock-row>
-                    row
-                </stock-row>
-                <recommend-badge>
-                    buy | hold | sell
-                </recommend-badge>
-            </stock-table>
+            <stock-table />
         </div>
         <div class="form">
             <search-input />

@@ -1,3 +1,31 @@
 .recommend-badge {
-    display: block;
+    height: 32px;
+    margin: 8px;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    line-height: 20px;
+    padding: 0 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sell {
+    color: #fff;
+    background-color: #F44336;
+    border-color: #F44336;
+}
+
+.buy {
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.hold {
+    color: #000;
+    background-color: #FFEB3B;
+    border-color: #FFEB3B;
 }
