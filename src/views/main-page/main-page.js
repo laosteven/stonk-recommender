@@ -9,9 +9,7 @@ export default {
         recommendBadge: () => import(/* webpackChunkName: "recommend-badge" */ '@/components/recommend-badge'),
         searchInput: () => import(/* webpackChunkName: "search-input" */ '@/components/search-input'),
 
-        svgHeader: () => import(/* webpackChunkName: "svg-header" */ '@/assets/svg-header.vue'),
         svgCalendar: () => import(/* webpackChunkName: "svg-calendar" */ '@/assets/svg-calendar.vue'),
-        svgSearch: () => import(/* webpackChunkName: "svg-search" */ '@/assets/svg-search.vue'),
         svgSetting: () => import(/* webpackChunkName: "svg-setting" */ '@/assets/svg-setting.vue'),
         svgShare: () => import(/* webpackChunkName: "svg-share" */ '@/assets/svg-share.vue'),
     },

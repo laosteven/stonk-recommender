@@ -3,25 +3,23 @@
 
 <template>
     <div class="main-page">
-        <header-bar>
-            <svg-header class="svg-header" />
-            header
-        </header-bar>
-        <stock-table>
-            table
-            <stock-row>
-                row
-            </stock-row>
-            <recommend-badge>
-                buy | hold | sell
-            </recommend-badge>
-        </stock-table>
-        <search-input>
-            <svg-search class="svg-form" />
-            search
-        </search-input>
-        <svg-calendar class="svg-form" />
-        <svg-share class="svg-form" />
-        <svg-setting class="svg-form" />
+        <header-bar class="header" />
+        <div class="content">
+            <stock-table>
+                table
+                <stock-row>
+                    row
+                </stock-row>
+                <recommend-badge>
+                    buy | hold | sell
+                </recommend-badge>
+            </stock-table>
+        </div>
+        <div class="form">
+            <search-input />
+            <svg-calendar class="svg-form" />
+            <svg-share class="svg-form" />
+            <svg-setting class="svg-form" />
+        </div>
     </div>
 </template>

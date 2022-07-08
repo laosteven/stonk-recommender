@@ -1,7 +1,17 @@
-.svg-header {
-    height: 32px;
-}
+.main-page {
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
 
-.svg-form {
-    height: 16px;
+    .content {
+        padding: 24px;
+    }
+
+    .form {
+        display: flex;
+        padding: 4px 16px;
+
+        .svg-form {
+            height: 16px;
+        }
+    }
 }

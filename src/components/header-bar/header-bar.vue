@@ -3,6 +3,7 @@
 
 <template>
     <div class="header-bar">
-        <slot />
+        <svg-header class="svg-header" />
+        <span class="header-title">Stonk Recommender</span>
     </div>
 </template>
