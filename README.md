@@ -20,5 +20,11 @@ yarn build
 yarn lint
 ```
 
+## Generate data
+```
+yarn generate-data
+yarn serve:data
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
